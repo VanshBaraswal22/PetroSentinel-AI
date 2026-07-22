@@ -127,15 +127,15 @@ export const MaritimeMap: React.FC<MaritimeMapProps> = ({
 
             {/* WAYPOINT 1: Strait of Hormuz (26.5°N, 56.5°E) */}
             <g
-              className="cursor-pointer transition-transform hover:scale-110"
+              className="cursor-pointer group"
               onClick={() => setSelectedNode('hormuz')}
             >
-              <circle cx="280" cy="180" r="18" fill={getNodeColor(hormuzRisk)} opacity="0.3" className="animate-ping" />
-              <circle cx="280" cy="180" r="12" fill="#0f172a" stroke={getNodeColor(hormuzRisk)} strokeWidth="3" />
+              <circle cx="280" cy="180" r="18" fill={getNodeColor(hormuzRisk)} opacity="0.3" className="animate-ping pointer-events-none" />
+              <circle cx="280" cy="180" r="12" fill="#0f172a" stroke={getNodeColor(hormuzRisk)} strokeWidth="3" className="group-hover:stroke-white transition-all" />
               <text x="280" y="184" textAnchor="middle" fill="#f8fafc" fontSize="10" fontWeight="bold" fontFamily="monospace">
                 {hormuzRisk}
               </text>
-              <text x="280" y="156" textAnchor="middle" fill="#f8fafc" fontSize="11" fontWeight="bold">
+              <text x="280" y="156" textAnchor="middle" fill="#f8fafc" fontSize="11" fontWeight="bold" className="group-hover:fill-amber-300 transition-colors">
                 Strait of Hormuz
               </text>
               <text x="280" y="142" textAnchor="middle" fill="#fbbf24" fontSize="9" fontWeight="semibold" fontFamily="monospace">
@@ -145,15 +145,15 @@ export const MaritimeMap: React.FC<MaritimeMapProps> = ({
 
             {/* WAYPOINT 2: Bab el-Mandeb / Red Sea (12.5°N, 43.3°E) */}
             <g
-              className="cursor-pointer transition-transform hover:scale-110"
+              className="cursor-pointer group"
               onClick={() => setSelectedNode('redsea')}
             >
-              <circle cx="130" cy="250" r="18" fill={getNodeColor(redSeaRisk)} opacity="0.3" className="animate-ping" />
-              <circle cx="130" cy="250" r="12" fill="#0f172a" stroke={getNodeColor(redSeaRisk)} strokeWidth="3" />
+              <circle cx="130" cy="250" r="18" fill={getNodeColor(redSeaRisk)} opacity="0.3" className="animate-ping pointer-events-none" />
+              <circle cx="130" cy="250" r="12" fill="#0f172a" stroke={getNodeColor(redSeaRisk)} strokeWidth="3" className="group-hover:stroke-white transition-all" />
               <text x="130" y="254" textAnchor="middle" fill="#f8fafc" fontSize="10" fontWeight="bold" fontFamily="monospace">
                 {redSeaRisk}
               </text>
-              <text x="130" y="278" textAnchor="middle" fill="#f8fafc" fontSize="11" fontWeight="bold">
+              <text x="130" y="278" textAnchor="middle" fill="#f8fafc" fontSize="11" fontWeight="bold" className="group-hover:fill-amber-300 transition-colors">
                 Bab el-Mandeb / Red Sea
               </text>
               <text x="130" y="291" textAnchor="middle" fill="#fbbf24" fontSize="9" fontWeight="semibold" fontFamily="monospace">
@@ -163,12 +163,12 @@ export const MaritimeMap: React.FC<MaritimeMapProps> = ({
 
             {/* WAYPOINT 3: Suez Canal Entry Point (30°N, 32.5°E) */}
             <g
-              className="cursor-pointer transition-transform hover:scale-110"
+              className="cursor-pointer group"
               onClick={() => setSelectedNode('suez')}
             >
-              <circle cx="70" cy="180" r="10" fill="#0f172a" stroke="#38bdf8" strokeWidth="2" />
+              <circle cx="70" cy="180" r="10" fill="#0f172a" stroke="#38bdf8" strokeWidth="2" className="group-hover:stroke-white transition-all" />
               <text x="70" y="183" textAnchor="middle" fill="#38bdf8" fontSize="8" fontWeight="bold">SZ</text>
-              <text x="70" y="162" textAnchor="middle" fill="#f8fafc" fontSize="10" fontWeight="bold">
+              <text x="70" y="162" textAnchor="middle" fill="#f8fafc" fontSize="10" fontWeight="bold" className="group-hover:fill-sky-300 transition-colors">
                 Suez Canal
               </text>
               <text x="70" y="150" textAnchor="middle" fill="#94a3b8" fontSize="8" fontFamily="monospace">
@@ -178,12 +178,12 @@ export const MaritimeMap: React.FC<MaritimeMapProps> = ({
 
             {/* WAYPOINT 4: Cape of Good Hope Reroute (34.4°S, 18.5°E) */}
             <g
-              className="cursor-pointer transition-transform hover:scale-110"
+              className="cursor-pointer group"
               onClick={() => setSelectedNode('cape')}
             >
-              <circle cx="60" cy="410" r="12" fill="#0f172a" stroke="#38bdf8" strokeWidth="2" strokeDasharray="3 2" />
+              <circle cx="60" cy="410" r="12" fill="#0f172a" stroke="#38bdf8" strokeWidth="2" strokeDasharray="3 2" className="group-hover:stroke-white transition-all" />
               <text x="60" y="414" textAnchor="middle" fill="#38bdf8" fontSize="9" fontWeight="bold">↪</text>
-              <text x="120" y="412" textAnchor="start" fill="#38bdf8" fontSize="10" fontWeight="bold">
+              <text x="120" y="412" textAnchor="start" fill="#38bdf8" fontSize="10" fontWeight="bold" className="group-hover:fill-sky-300 transition-colors">
                 Cape of Good Hope
               </text>
               <text x="120" y="424" textAnchor="start" fill="#94a3b8" fontSize="8" fontFamily="monospace">
@@ -193,12 +193,12 @@ export const MaritimeMap: React.FC<MaritimeMapProps> = ({
 
             {/* WAYPOINT 5: Paradip & East Coast Port Cluster (20.3°N, 86.6°E) */}
             <g
-              className="cursor-pointer transition-transform hover:scale-110"
+              className="cursor-pointer group"
               onClick={() => setSelectedNode('paradip')}
             >
-              <rect x="595" y="205" width="28" height="28" rx="6" fill="#047857" stroke="#34d399" strokeWidth="2" />
+              <rect x="595" y="205" width="28" height="28" rx="6" fill="#047857" stroke="#34d399" strokeWidth="2" className="group-hover:stroke-white transition-all" />
               <text x="609" y="223" textAnchor="middle" fill="#ffffff" fontSize="13">⚓</text>
-              <text x="609" y="248" textAnchor="middle" fill="#34d399" fontSize="10" fontWeight="bold">
+              <text x="609" y="248" textAnchor="middle" fill="#34d399" fontSize="10" fontWeight="bold" className="group-hover:fill-emerald-300 transition-colors">
                 Paradip & East Hub
               </text>
               <text x="609" y="259" textAnchor="middle" fill="#94a3b8" fontSize="8" fontFamily="monospace">
@@ -208,12 +208,12 @@ export const MaritimeMap: React.FC<MaritimeMapProps> = ({
 
             {/* DESTINATION NODE: Jamnagar / Vadinar Hub */}
             <g
-              className="cursor-pointer transition-transform hover:scale-110"
+              className="cursor-pointer group"
               onClick={() => setSelectedNode('jamnagar')}
             >
-              <rect x="495" y="205" width="30" height="30" rx="6" fill="#0369a1" stroke="#38bdf8" strokeWidth="2" />
+              <rect x="495" y="205" width="30" height="30" rx="6" fill="#0369a1" stroke="#38bdf8" strokeWidth="2" className="group-hover:stroke-white transition-all" />
               <text x="510" y="224" textAnchor="middle" fill="#ffffff" fontSize="14">⚓</text>
-              <text x="510" y="248" textAnchor="middle" fill="#38bdf8" fontSize="10" fontWeight="bold">
+              <text x="510" y="248" textAnchor="middle" fill="#38bdf8" fontSize="10" fontWeight="bold" className="group-hover:fill-sky-300 transition-colors">
                 Jamnagar Hub
               </text>
             </g>

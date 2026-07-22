@@ -189,15 +189,15 @@ export default function App() {
         </main>
       </div>
 
-      <footer className="border-t border-slate-800 bg-slate-900/90 py-5 mt-12 text-xs text-slate-400">
+      <footer className="border-t border-slate-800 bg-slate-900/90 py-5 mt-12 text-xs text-slate-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-amber-500" />
-            <span className="font-bold text-slate-300">India Energy Security & Supply Disruption Command System</span>
+            <span className="font-bold text-slate-200">India Energy Security & Supply Disruption Command System</span>
             <span className="text-slate-600">|</span>
             <span>Ministry of Petroleum and Natural Gas, New Delhi</span>
           </div>
-          <div className="flex items-center gap-4 text-slate-500 font-mono text-[11px]">
+          <div className="flex items-center gap-4 text-slate-300 font-mono text-[11px]">
             <span>Import Dependency: <strong className="text-amber-400">88.6%</strong></span>
             <span>SPR Buffer: <strong className="text-emerald-400">5.33 MMT</strong></span>
             <span>Corridors: <strong className="text-sky-400">Hormuz • Bab-el-Mandeb • OPEC+</strong></span>

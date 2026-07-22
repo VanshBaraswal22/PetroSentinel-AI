@@ -324,7 +324,7 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
 
             <div className="pt-2 pb-1 border-t border-slate-800">
-              <span className="text-xs font-bold text-slate-400 uppercase tracking-wider px-2 block mb-1">
+              <span className="text-xs font-bold text-slate-300 uppercase tracking-wider px-2 block mb-1">
                 Developer Tools
               </span>
               <div className="space-y-1">
@@ -333,7 +333,7 @@ export const Header: React.FC<HeaderProps> = ({
                   className={`w-full px-4 py-2.5 rounded-lg text-xs font-semibold flex items-center gap-3 transition-all min-h-[44px] ${
                     activeTab === 'architecture'
                       ? 'bg-blue-900/60 text-blue-200 border border-blue-700'
-                      : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
+                      : 'text-slate-300 hover:text-slate-100 hover:bg-slate-800/60'
                   }`}
                 >
                   <Layers className="w-4 h-4 text-blue-400" />
@@ -345,7 +345,7 @@ export const Header: React.FC<HeaderProps> = ({
                   className={`w-full px-4 py-2.5 rounded-lg text-xs font-semibold flex items-center gap-3 transition-all font-mono min-h-[44px] ${
                     activeTab === 'api'
                       ? 'bg-blue-900/60 text-blue-200 border border-blue-700'
-                      : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
+                      : 'text-slate-300 hover:text-slate-100 hover:bg-slate-800/60'
                   }`}
                 >
                   <Code2 className="w-4 h-4 text-blue-400" />
@@ -357,7 +357,7 @@ export const Header: React.FC<HeaderProps> = ({
                   className={`w-full px-4 py-2.5 rounded-lg text-xs font-semibold flex items-center gap-3 transition-all min-h-[44px] ${
                     activeTab === 'history'
                       ? 'bg-blue-900/60 text-blue-200 border border-blue-700'
-                      : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
+                      : 'text-slate-300 hover:text-slate-100 hover:bg-slate-800/60'
                   }`}
                 >
                   <History className="w-4 h-4 text-blue-400" />
@@ -371,7 +371,7 @@ export const Header: React.FC<HeaderProps> = ({
       </div>
 
       {/* Slim Context Stat Strip directly under Header - HIDDEN BELOW MD BREAKPOINT */}
-      <div className="bg-slate-950/95 border-t border-slate-800 py-2 px-4 sm:px-6 lg:px-8 text-xs font-mono text-slate-400 hidden md:block">
+      <div className="bg-slate-950/95 border-t border-slate-800 py-2 px-4 sm:px-6 lg:px-8 text-xs font-mono text-slate-300 hidden md:block">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-y-1.5 gap-x-4">
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-blue-400 shrink-0" />

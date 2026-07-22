@@ -68,7 +68,7 @@ export const RiskGauge: React.FC<RiskGaugeProps> = ({
           </div>
           <div>
             <h3 className="text-sm font-bold text-slate-100 leading-tight">{label}</h3>
-            <p className="text-xs text-slate-400 font-medium mt-0.5">{subtitle}</p>
+            <p className="text-xs text-slate-300 font-medium mt-0.5">{subtitle}</p>
           </div>
         </div>
 
@@ -80,12 +80,12 @@ export const RiskGauge: React.FC<RiskGaugeProps> = ({
       {/* Numeric Score and Meter Bar */}
       <div className="mt-3">
         <div className="flex items-baseline justify-between mb-1.5">
-          <span className="text-xs font-semibold text-slate-400">Disruption Probability</span>
+          <span className="text-xs font-semibold text-slate-300">Disruption Probability</span>
           <div className="flex items-baseline gap-1">
             <span className={`text-2xl font-black ${severity.color}`}>
               {score}
             </span>
-            <span className="text-xs text-slate-500 font-semibold">/ 100</span>
+            <span className="text-xs text-slate-400 font-semibold">/ 100</span>
           </div>
         </div>
 
@@ -100,8 +100,8 @@ export const RiskGauge: React.FC<RiskGaugeProps> = ({
 
       {/* Details snippet */}
       {highlightDetails && (
-        <div className="mt-4 pt-3 border-t border-slate-800/80 text-xs text-slate-300 leading-relaxed font-medium">
-          <span className="text-slate-400 text-[10px] uppercase font-bold block mb-0.5">Key Observation:</span>
+        <div className="mt-4 pt-3 border-t border-slate-800/80 text-xs text-slate-200 leading-relaxed font-medium">
+          <span className="text-slate-300 text-[10px] uppercase font-bold block mb-0.5">Key Observation:</span>
           {highlightDetails}
         </div>
       )}

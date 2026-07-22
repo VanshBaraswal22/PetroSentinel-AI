@@ -32,7 +32,7 @@ export const ArchitectureView: React.FC = () => {
         <h2 className="text-2xl font-black text-slate-100 tracking-tight">
           System Architecture & Data Flow Diagram
         </h2>
-        <p className="text-sm text-slate-400 max-w-2xl mx-auto">
+        <p className="text-sm text-slate-300 max-w-2xl mx-auto">
           Top-to-bottom pipeline processing real-time geopolitical intelligence through Gemini AI into operational energy security decisions.
         </p>
       </div>
@@ -59,7 +59,7 @@ export const ArchitectureView: React.FC = () => {
               </div>
               <div>
                 <div className="text-xs font-bold text-slate-100">News/Wire Feed</div>
-                <div className="text-[11px] text-slate-400 mt-0.5">Real-time Reuters, AP, Bloomberg geopolitical wire ingestion</div>
+                <div className="text-[11px] text-slate-300 mt-0.5">Real-time Reuters, AP, Bloomberg geopolitical wire ingestion</div>
               </div>
             </div>
 
@@ -69,7 +69,7 @@ export const ArchitectureView: React.FC = () => {
               </div>
               <div>
                 <div className="text-xs font-bold text-slate-100">AIS Vessel Data</div>
-                <div className="text-[11px] text-slate-400 mt-0.5">VLCC vessel locations, speed & chokepoint telemetry</div>
+                <div className="text-[11px] text-slate-300 mt-0.5">VLCC vessel locations, speed & chokepoint telemetry</div>
               </div>
             </div>
 
@@ -79,7 +79,7 @@ export const ArchitectureView: React.FC = () => {
               </div>
               <div>
                 <div className="text-xs font-bold text-slate-100">Sanctions Registry</div>
-                <div className="text-[11px] text-slate-400 mt-0.5">OFAC, Maritime Advisories & Indian Navy DG Shipping</div>
+                <div className="text-[11px] text-slate-300 mt-0.5">OFAC, Maritime Advisories & Indian Navy DG Shipping</div>
               </div>
             </div>
 
@@ -89,7 +89,7 @@ export const ArchitectureView: React.FC = () => {
               </div>
               <div>
                 <div className="text-xs font-bold text-slate-100">Commodity Prices</div>
-                <div className="text-[11px] text-slate-400 mt-0.5">Brent Crude, Dubai Sour, OSP Surcharges & Freight Swaps</div>
+                <div className="text-[11px] text-slate-300 mt-0.5">Brent Crude, Dubai Sour, OSP Surcharges & Freight Swaps</div>
               </div>
             </div>
           </div>
@@ -122,7 +122,7 @@ export const ArchitectureView: React.FC = () => {
               </div>
               <div>
                 <div className="text-xs font-bold text-slate-100">Multi-Source Fusion</div>
-                <div className="text-[11px] text-slate-400 mt-0.5">Correlates disparate news feeds, vessel tracking, and pricing anomalies into unified event vectors</div>
+                <div className="text-[11px] text-slate-300 mt-0.5">Correlates disparate news feeds, vessel tracking, and pricing anomalies into unified event vectors</div>
               </div>
             </div>
 
@@ -132,7 +132,7 @@ export const ArchitectureView: React.FC = () => {
               </div>
               <div>
                 <div className="text-xs font-bold text-slate-100">NLP Extraction</div>
-                <div className="text-[11px] text-slate-400 mt-0.5">Extracts threat severity, involved chokepoints, affected refinery grades, and lead time metrics</div>
+                <div className="text-[11px] text-slate-300 mt-0.5">Extracts threat severity, involved chokepoints, affected refinery grades, and lead time metrics</div>
               </div>
             </div>
 
@@ -142,7 +142,7 @@ export const ArchitectureView: React.FC = () => {
               </div>
               <div>
                 <div className="text-xs font-bold text-slate-100">Risk Scoring Algorithm</div>
-                <div className="text-[11px] text-slate-400 mt-0.5">Computes normalized risk scores (0-100), risk momentum trends, and recommended policy mitigations</div>
+                <div className="text-[11px] text-slate-300 mt-0.5">Computes normalized risk scores (0-100), risk momentum trends, and recommended policy mitigations</div>
               </div>
             </div>
           </div>
@@ -175,7 +175,7 @@ export const ArchitectureView: React.FC = () => {
               </div>
               <div>
                 <div className="text-xs font-bold text-slate-100">Hormuz Score</div>
-                <div className="text-[11px] text-slate-400 mt-0.5">Tracks 26.5°N 56.5°E bottleneck threat (2.1M bpd Indian volume)</div>
+                <div className="text-[11px] text-slate-300 mt-0.5">Tracks 26.5°N 56.5°E bottleneck threat (2.1M bpd Indian volume)</div>
               </div>
             </div>
 
@@ -185,7 +185,7 @@ export const ArchitectureView: React.FC = () => {
               </div>
               <div>
                 <div className="text-xs font-bold text-slate-100">Red Sea Score</div>
-                <div className="text-[11px] text-slate-400 mt-0.5">Monitors Bab el-Mandeb / Suez reroute delays & freight surcharges</div>
+                <div className="text-[11px] text-slate-300 mt-0.5">Monitors Bab el-Mandeb / Suez reroute delays & freight surcharges</div>
               </div>
             </div>
 
@@ -195,7 +195,7 @@ export const ArchitectureView: React.FC = () => {
               </div>
               <div>
                 <div className="text-xs font-bold text-slate-100">OPEC Score</div>
-                <div className="text-[11px] text-slate-400 mt-0.5">Evaluates quota cut policy, OSP premium hikes & Middle East supply tightness</div>
+                <div className="text-[11px] text-slate-300 mt-0.5">Evaluates quota cut policy, OSP premium hikes & Middle East supply tightness</div>
               </div>
             </div>
 
@@ -205,7 +205,7 @@ export const ArchitectureView: React.FC = () => {
               </div>
               <div>
                 <div className="text-xs font-bold text-slate-100">Composite Index</div>
-                <div className="text-[11px] text-slate-400 mt-0.5">Weighted national disruption risk score triggering automated alert levels</div>
+                <div className="text-[11px] text-slate-300 mt-0.5">Weighted national disruption risk score triggering automated alert levels</div>
               </div>
             </div>
           </div>
@@ -238,7 +238,7 @@ export const ArchitectureView: React.FC = () => {
               </div>
               <div>
                 <div className="text-xs font-bold text-slate-100">Maritime Map</div>
-                <div className="text-[11px] text-slate-400 mt-0.5">Geospatial corridor monitor with real-time waypoint telemetry & AIS updates</div>
+                <div className="text-[11px] text-slate-300 mt-0.5">Geospatial corridor monitor with real-time waypoint telemetry & AIS updates</div>
               </div>
             </div>
 
@@ -248,7 +248,7 @@ export const ArchitectureView: React.FC = () => {
               </div>
               <div>
                 <div className="text-xs font-bold text-slate-100">Scenario Impact</div>
-                <div className="text-[11px] text-slate-400 mt-0.5">Digital twin stress-testing, Brent crude price projections & supply rerouting</div>
+                <div className="text-[11px] text-slate-300 mt-0.5">Digital twin stress-testing, Brent crude price projections & supply rerouting</div>
               </div>
             </div>
 
@@ -258,7 +258,7 @@ export const ArchitectureView: React.FC = () => {
               </div>
               <div>
                 <div className="text-xs font-bold text-slate-100">SPR Intelligence</div>
-                <div className="text-[11px] text-slate-400 mt-0.5">Mangalore, Padur & Visakhapatnam reserve depletion curves & drawdown mandates</div>
+                <div className="text-[11px] text-slate-300 mt-0.5">Mangalore, Padur & Visakhapatnam reserve depletion curves & drawdown mandates</div>
               </div>
             </div>
 
@@ -268,7 +268,7 @@ export const ArchitectureView: React.FC = () => {
               </div>
               <div>
                 <div className="text-xs font-bold text-slate-100">Exec Brief</div>
-                <div className="text-[11px] text-slate-400 mt-0.5">Policy-ready PDF export generator formatted for Ministry cabinet briefings</div>
+                <div className="text-[11px] text-slate-300 mt-0.5">Policy-ready PDF export generator formatted for Ministry cabinet briefings</div>
               </div>
             </div>
           </div>
@@ -277,7 +277,7 @@ export const ArchitectureView: React.FC = () => {
         {/* Architecture Diagram Legend */}
         <div className="flex flex-wrap items-center justify-between gap-4 text-xs font-mono bg-slate-900 p-4 rounded-xl border border-slate-800 shadow-sm mt-6">
           <div className="flex items-center gap-2">
-            <span className="text-slate-400 font-bold uppercase">Architecture Layer Legend:</span>
+            <span className="text-slate-300 font-bold uppercase">Architecture Layer Legend:</span>
           </div>
           <div className="flex flex-wrap items-center gap-5">
             <div className="flex items-center gap-2">
@@ -303,7 +303,7 @@ export const ArchitectureView: React.FC = () => {
 
       {/* Production Tech Stack Section */}
       <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-sm space-y-3">
-        <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-slate-400">
+        <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-slate-300">
           <Server className="w-4 h-4 text-blue-400" />
           <span>Production Tech Stack & Framework Integration</span>
         </div>

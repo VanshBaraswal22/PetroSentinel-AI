@@ -113,7 +113,7 @@ export const SignalProcessor: React.FC<SignalProcessorProps> = ({
             </span>
             <div>
               <h2 className="text-base font-bold text-slate-100 leading-none">Signal Ingestion Feed</h2>
-              <p className="text-xs text-slate-400 mt-1">
+              <p className="text-xs text-slate-300 mt-1">
                 Paste shipping alerts or geopolitical news to calculate disruption scores.
               </p>
             </div>
@@ -222,7 +222,7 @@ export const SignalProcessor: React.FC<SignalProcessorProps> = ({
 
           {/* Action Row */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
-            <div className="text-xs text-slate-400 flex items-center gap-2">
+            <div className="text-xs text-slate-300 flex items-center gap-2">
               <span className="inline-block w-2 h-2 rounded-full bg-blue-500 animate-ping"></span>
               <span>Scanning key vulnerabilities: <strong className="text-slate-200">Hormuz</strong>, <strong className="text-slate-200">Red Sea</strong>, <strong className="text-slate-200">OPEC+</strong></span>
             </div>

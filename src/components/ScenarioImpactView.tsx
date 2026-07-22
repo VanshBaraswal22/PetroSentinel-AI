@@ -201,7 +201,7 @@ export const ScenarioImpactView: React.FC<ScenarioImpactViewProps> = ({ initialS
           className={`flex-1 py-2.5 px-3 rounded-lg text-xs font-bold flex items-center justify-center gap-2 transition-all min-h-[44px] ${
             subTab === 'macro'
               ? 'bg-blue-900 text-white shadow-sm'
-              : 'text-slate-400 hover:text-slate-100 hover:bg-slate-800'
+              : 'text-slate-300 hover:text-slate-100 hover:bg-slate-800'
           }`}
         >
           <Activity className="w-4 h-4" />
@@ -213,7 +213,7 @@ export const ScenarioImpactView: React.FC<ScenarioImpactViewProps> = ({ initialS
           className={`flex-1 py-2.5 px-3 rounded-lg text-xs font-bold flex items-center justify-center gap-2 transition-all min-h-[44px] ${
             subTab === 'logistics'
               ? 'bg-blue-900 text-white shadow-sm'
-              : 'text-slate-400 hover:text-slate-100 hover:bg-slate-800'
+              : 'text-slate-300 hover:text-slate-100 hover:bg-slate-800'
           }`}
         >
           <Route className="w-4 h-4" />
@@ -243,14 +243,14 @@ export const ScenarioImpactView: React.FC<ScenarioImpactViewProps> = ({ initialS
                 <h2 className="text-lg sm:text-xl font-extrabold text-slate-100">
                   India Energy Supply Chain Stress Model
                 </h2>
-                <p className="text-xs text-slate-400 mt-0.5">
+                <p className="text-xs text-slate-300 mt-0.5">
                   Simulate chokepoint capacity cuts & OPEC quotas to compute immediate Brent price shocks, net crude import deficits, and SPR survival runways.
                 </p>
               </div>
 
               {/* Preset Scenario Buttons */}
               <div className="flex flex-wrap items-center gap-2">
-                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider w-full lg:w-auto block lg:inline">
+                <span className="text-xs font-bold text-slate-300 uppercase tracking-wider w-full lg:w-auto block lg:inline">
                   Preset Scenarios:
                 </span>
 
@@ -283,7 +283,7 @@ export const ScenarioImpactView: React.FC<ScenarioImpactViewProps> = ({ initialS
                   className="px-3 py-2 rounded-lg text-xs font-bold bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-700 flex items-center gap-1.5 transition-all min-h-[44px]"
                   title="Reset to normal operational baseline"
                 >
-                  <RotateCcw className="w-4 h-4 text-slate-400" />
+                  <RotateCcw className="w-4 h-4 text-slate-300" />
                   Reset
                 </button>
               </div>
@@ -314,12 +314,12 @@ export const ScenarioImpactView: React.FC<ScenarioImpactViewProps> = ({ initialS
                   onChange={(e) => setHormuzCut(Number(e.target.value))}
                   className="w-full accent-blue-500 h-2 bg-slate-800 rounded-lg cursor-pointer"
                 />
-                <div className="flex justify-between text-xs text-slate-400 font-medium">
+                <div className="flex justify-between text-xs text-slate-300 font-medium">
                   <span>0% (Normal)</span>
                   <span>50%</span>
                   <span>100% (Blocked)</span>
                 </div>
-                <p className="text-xs text-slate-400 leading-tight">
+                <p className="text-xs text-slate-300 leading-tight">
                   Handles 1.80 M bpd (~42.5% of total Indian crude imports).
                 </p>
               </div>
@@ -346,12 +346,12 @@ export const ScenarioImpactView: React.FC<ScenarioImpactViewProps> = ({ initialS
                   onChange={(e) => setRedSeaCut(Number(e.target.value))}
                   className="w-full accent-sky-500 h-2 bg-slate-800 rounded-lg cursor-pointer"
                 />
-                <div className="flex justify-between text-xs text-slate-400 font-medium">
+                <div className="flex justify-between text-xs text-slate-300 font-medium">
                   <span>0% (Clear)</span>
                   <span>50%</span>
                   <span>100% (Suspended)</span>
                 </div>
-                <p className="text-xs text-slate-400 leading-tight">
+                <p className="text-xs text-slate-300 leading-tight">
                   Handles 1.48 M bpd (~35% of imports; forces +14d Cape detour).
                 </p>
               </div>
@@ -378,12 +378,12 @@ export const ScenarioImpactView: React.FC<ScenarioImpactViewProps> = ({ initialS
                   onChange={(e) => setOpecCut(Number(e.target.value))}
                   className="w-full accent-amber-500 h-2 bg-slate-800 rounded-lg cursor-pointer"
                 />
-                <div className="flex justify-between text-xs text-slate-400 font-medium">
+                <div className="flex justify-between text-xs text-slate-300 font-medium">
                   <span>0.0 M bpd</span>
                   <span>2.5 M bpd</span>
                   <span>5.0 M bpd</span>
                 </div>
-                <p className="text-xs text-slate-400 leading-tight">
+                <p className="text-xs text-slate-300 leading-tight">
                   Global quota reduction impacting Saudi, Iraq, and UAE term supplies.
                 </p>
               </div>
@@ -396,59 +396,59 @@ export const ScenarioImpactView: React.FC<ScenarioImpactViewProps> = ({ initialS
             
             {/* KPI 1: Projected Brent Price */}
             <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-sm space-y-1">
-              <div className="flex items-center justify-between text-slate-400">
+              <div className="flex items-center justify-between text-slate-300">
                 <span className="text-xs font-bold uppercase tracking-wider">Projected Brent Price</span>
                 <TrendingUp className="w-4 h-4 text-blue-400" />
               </div>
               <div className="text-2xl sm:text-3xl font-extrabold text-slate-100 font-mono">
                 ${metrics.projectedBrent.toFixed(2)}
-                <span className="text-xs text-slate-400 font-normal"> /bbl</span>
+                <span className="text-xs text-slate-300 font-normal"> /bbl</span>
               </div>
               <div className="flex items-center gap-2 pt-1 text-xs">
                 <span className={`font-bold font-mono ${metrics.priceSurgeDollar > 0 ? 'text-red-400' : 'text-emerald-400'}`}>
                   {metrics.priceSurgeDollar >= 0 ? '+' : ''}${metrics.priceSurgeDollar.toFixed(2)} ({metrics.priceSurgePct >= 0 ? '+' : ''}{metrics.priceSurgePct.toFixed(1)}%)
                 </span>
-                <span className="text-slate-500">vs $82 base</span>
+                <span className="text-slate-400">vs $82 base</span>
               </div>
-              <p className="text-xs text-slate-400 border-t border-slate-800 pt-2 mt-2">
+              <p className="text-xs text-slate-300 border-t border-slate-800 pt-2 mt-2">
                 Est. pump price impact: <strong className="text-slate-200 font-mono">+₹{metrics.pumpImpactINR.toFixed(1)}/L</strong>
               </p>
             </div>
 
             {/* KPI 2: Affected Import Volume */}
             <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-sm space-y-1">
-              <div className="flex items-center justify-between text-slate-400">
+              <div className="flex items-center justify-between text-slate-300">
                 <span className="text-xs font-bold uppercase tracking-wider">Affected Import Volume</span>
                 <Droplets className="w-4 h-4 text-sky-400" />
               </div>
               <div className="text-2xl sm:text-3xl font-extrabold text-slate-100 font-mono">
                 {metrics.affectedVolumeMBPD.toFixed(2)}
-                <span className="text-xs text-slate-400 font-normal"> M bpd</span>
+                <span className="text-xs text-slate-300 font-normal"> M bpd</span>
               </div>
               <div className="text-xs text-slate-300 pt-1">
                 <strong className="text-blue-400 font-mono">
                   {((metrics.affectedVolumeMBPD / 4.22) * 100).toFixed(1)}%
                 </strong> of total 4.22M bpd import stream
               </div>
-              <p className="text-xs text-slate-400 border-t border-slate-800 pt-2 mt-2">
+              <p className="text-xs text-slate-300 border-t border-slate-800 pt-2 mt-2">
                 Hormuz + Red Sea + OPEC quota disruptions combined.
               </p>
             </div>
 
             {/* KPI 3: Net Daily Supply Deficit */}
             <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-sm space-y-1">
-              <div className="flex items-center justify-between text-slate-400">
+              <div className="flex items-center justify-between text-slate-300">
                 <span className="text-xs font-bold uppercase tracking-wider">Net Daily Crude Deficit</span>
                 <AlertTriangle className="w-4 h-4 text-amber-400" />
               </div>
               <div className={`text-2xl sm:text-3xl font-extrabold font-mono ${metrics.netDeficitMBPD > 1.0 ? 'text-red-400' : 'text-slate-100'}`}>
                 {metrics.netDeficitMBPD.toFixed(2)}
-                <span className="text-xs text-slate-400 font-normal"> M bpd</span>
+                <span className="text-xs text-slate-300 font-normal"> M bpd</span>
               </div>
               <div className="text-xs text-slate-300 pt-1">
                 Net physical deficit requiring drawdown or spot substitution
               </div>
-              <p className="text-xs text-slate-400 border-t border-slate-800 pt-2 mt-2">
+              <p className="text-xs text-slate-300 border-t border-slate-800 pt-2 mt-2">
                 Equivalent to ~{Math.round(metrics.netDeficitMBPD * 1000)}k barrels/day missing.
               </p>
             </div>
@@ -461,7 +461,7 @@ export const ScenarioImpactView: React.FC<ScenarioImpactViewProps> = ({ initialS
                 ? 'bg-amber-950/50 border-amber-800/80'
                 : 'bg-slate-900 border-slate-800'
             }`}>
-              <div className="flex items-center justify-between text-slate-400">
+              <div className="flex items-center justify-between text-slate-300">
                 <span className="text-xs font-bold uppercase tracking-wider">SPR Exhaustion Runway</span>
                 <Database className="w-4 h-4 text-blue-400" />
               </div>
@@ -473,7 +473,7 @@ export const ScenarioImpactView: React.FC<ScenarioImpactViewProps> = ({ initialS
               <div className="text-xs font-semibold text-slate-300 pt-1">
                 {metrics.sprDaysToDepletion < 9.5 ? 'CRITICAL: Below 9.5-day ISPRL baseline' : 'Within normal ISPRL buffer guidelines'}
               </div>
-              <p className="text-xs text-slate-400 border-t border-slate-800 pt-2 mt-2">
+              <p className="text-xs text-slate-300 border-t border-slate-800 pt-2 mt-2">
                 Total ISPRL cavern stock: 39.0 Million Barrels (5.33 MMT).
               </p>
             </div>
@@ -491,11 +491,11 @@ export const ScenarioImpactView: React.FC<ScenarioImpactViewProps> = ({ initialS
                     <Database className="w-4 h-4 text-blue-400" />
                     30-Day Strategic Petroleum Reserve (SPR) Drawdown Curve
                   </h3>
-                  <span className="text-xs font-mono font-bold text-slate-400 bg-slate-950 px-2 py-0.5 rounded border border-slate-800">
+                  <span className="text-xs font-mono font-bold text-slate-300 bg-slate-950 px-2 py-0.5 rounded border border-slate-800">
                     ISPRL Buffer Projection
                   </span>
                 </div>
-                <p className="text-xs text-slate-400 mt-1">
+                <p className="text-xs text-slate-300 mt-1">
                   Projected remaining underground reserves (Padur, Visakhapatnam, Mangalore) assuming no immediate non-Gulf spot replacement.
                 </p>
               </div>
@@ -523,7 +523,7 @@ export const ScenarioImpactView: React.FC<ScenarioImpactViewProps> = ({ initialS
                 </ResponsiveContainer>
               </div>
 
-              <div className="flex items-center justify-between text-xs text-slate-400 pt-2 border-t border-slate-800 flex-wrap gap-2">
+              <div className="flex items-center justify-between text-xs text-slate-300 pt-2 border-t border-slate-800 flex-wrap gap-2">
                 <div className="flex items-center gap-2">
                   <span className="w-3 h-3 rounded bg-blue-500 inline-block"></span>
                   <span>Active Simulation Curve</span>
@@ -543,7 +543,7 @@ export const ScenarioImpactView: React.FC<ScenarioImpactViewProps> = ({ initialS
                   Indian Refinery Vulnerability Ranking
                 </h3>
               </div>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-slate-300">
                 Exposure scores recalculated live based on crude sulfur types, regional port logistics, and cavern linkages.
               </p>
 
@@ -553,7 +553,7 @@ export const ScenarioImpactView: React.FC<ScenarioImpactViewProps> = ({ initialS
                     <div className="flex items-center justify-between">
                       <div>
                         <span className="text-xs font-bold text-slate-100">{ref.name}</span>
-                        <span className="text-xs text-slate-400 ml-2">({ref.capacityMBPD} M bpd)</span>
+                        <span className="text-xs text-slate-300 ml-2">({ref.capacityMBPD} M bpd)</span>
                       </div>
                       <span className={`text-xs font-black px-2 py-0.5 rounded ${
                         ref.exposureScore >= 70 ? 'bg-red-600 text-white' : ref.exposureScore >= 40 ? 'bg-amber-600 text-white' : 'bg-emerald-600 text-white'
@@ -572,7 +572,7 @@ export const ScenarioImpactView: React.FC<ScenarioImpactViewProps> = ({ initialS
                       />
                     </div>
 
-                    <div className="flex items-center justify-between text-xs text-slate-400">
+                    <div className="flex items-center justify-between text-xs text-slate-300">
                       <span>{ref.location}</span>
                       <span className="truncate max-w-[180px]" title={ref.primarySource}>{ref.primarySource}</span>
                     </div>

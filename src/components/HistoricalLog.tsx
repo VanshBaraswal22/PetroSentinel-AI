@@ -41,7 +41,7 @@ export const HistoricalLog: React.FC<HistoricalLogProps> = ({ history }) => {
               <History className="w-5 h-5 text-blue-400" />
               Historical Risk Signal Trends & Early-Warning Audit Log
             </h2>
-            <p className="text-xs text-slate-400 mt-0.5">
+            <p className="text-xs text-slate-300 mt-0.5">
               Quantifying system detection lead time ahead of real-world energy spot market price shifts.
             </p>
           </div>
@@ -89,13 +89,13 @@ export const HistoricalLog: React.FC<HistoricalLogProps> = ({ history }) => {
 
           <div className="bg-slate-950/70 border border-slate-800 rounded-xl p-3.5 flex items-center justify-between">
             <div>
-              <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1">
-                <TrendingUp className="w-3.5 h-3.5 text-slate-400" /> Predictive Advantage
+              <div className="text-[10px] font-bold uppercase tracking-wider text-slate-300 flex items-center gap-1">
+                <TrendingUp className="w-3.5 h-3.5 text-slate-300" /> Predictive Advantage
               </div>
               <div className="text-sm font-extrabold text-slate-100 mt-1 leading-snug">
                 NLP Signal Processor vs Market Lag
               </div>
-              <p className="text-[10px] text-slate-400 mt-0.5">
+              <p className="text-[10px] text-slate-300 mt-0.5">
                 Flags naval drills & quotas before physical spot movement
               </p>
             </div>
@@ -105,7 +105,7 @@ export const HistoricalLog: React.FC<HistoricalLogProps> = ({ history }) => {
         {/* Recharts Area Chart Visualizer */}
         {history.length > 0 ? (
           <div className="bg-slate-950/80 p-4 rounded-xl border border-slate-800">
-            <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-1.5">
+            <h3 className="text-xs font-bold text-slate-300 uppercase tracking-wider mb-3 flex items-center gap-1.5">
               <TrendingUp className="w-4 h-4 text-blue-400" />
               Corridor Risk Trajectory Timeline
             </h3>
@@ -159,7 +159,7 @@ export const HistoricalLog: React.FC<HistoricalLogProps> = ({ history }) => {
 
           <table className="w-full text-left text-xs font-mono min-w-[700px]">
             <thead>
-              <tr className="border-b border-slate-800 text-slate-400">
+              <tr className="border-b border-slate-800 text-slate-300">
                 <th className="pb-2">Timestamp</th>
                 <th className="pb-2">Feed Title</th>
                 <th className="pb-2 text-center">Risk Score</th>

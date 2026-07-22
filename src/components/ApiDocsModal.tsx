@@ -35,7 +35,7 @@ export const ApiDocsModal: React.FC = () => {
           <Code2 className="w-5 h-5 text-blue-900" />
           <h2 className="text-lg font-bold text-slate-900">Live Risk Signal API Endpoint Documentation</h2>
         </div>
-        <p className="text-xs text-slate-500">
+        <p className="text-xs text-slate-600">
           Programmatic access to India's Ministry of Petroleum Risk Signal Processor.
         </p>
       </div>
@@ -57,7 +57,7 @@ export const ApiDocsModal: React.FC = () => {
           </p>
 
           <div className="bg-slate-50 p-3 rounded-lg border border-slate-200 space-y-2 font-mono">
-            <span className="text-slate-500 uppercase font-bold text-[10px] block">Request Headers:</span>
+            <span className="text-slate-600 uppercase font-bold text-[10px] block">Request Headers:</span>
             <div className="text-slate-800">Content-Type: <span className="text-emerald-700 font-bold">application/json</span> or <span className="text-emerald-700 font-bold">text/plain</span></div>
             <div className="text-slate-800">X-Raw-Output: <span className="text-blue-900 font-bold">true</span> (Optional: forces raw 5-field JSON response)</div>
           </div>
@@ -66,7 +66,7 @@ export const ApiDocsModal: React.FC = () => {
         {/* cURL Command Box */}
         <div className="space-y-2 font-mono">
           <div className="flex items-center justify-between">
-            <span className="text-xs text-slate-500 font-bold uppercase flex items-center gap-1.5">
+            <span className="text-xs text-slate-600 font-bold uppercase flex items-center gap-1.5">
               <Terminal className="w-4 h-4 text-blue-900" /> cURL Request Snippet
             </span>
             <button
@@ -86,7 +86,7 @@ export const ApiDocsModal: React.FC = () => {
         {/* Response Structure Box */}
         <div className="space-y-2 font-mono">
           <div className="flex items-center justify-between">
-            <span className="text-xs text-slate-500 font-bold uppercase flex items-center gap-1.5">
+            <span className="text-xs text-slate-600 font-bold uppercase flex items-center gap-1.5">
               <Send className="w-4 h-4 text-emerald-600" /> Exact Standard JSON Response Schema
             </span>
             <button

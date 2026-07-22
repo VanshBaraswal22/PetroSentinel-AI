@@ -97,18 +97,18 @@ export const RefineryAndSPR: React.FC<RefineryAndSPRProps> = ({ overallScore }) 
               <Database className="w-5 h-5 text-blue-400" />
               <h2 className="text-lg font-bold text-slate-100">India Strategic Petroleum Reserves (ISPRL) & Refinery Buffer</h2>
             </div>
-            <p className="text-xs text-slate-400 mt-1">
+            <p className="text-xs text-slate-300 mt-1">
               National crude oil emergency drawdown simulation and refinery inventory buffer matrix.
             </p>
           </div>
 
           <div className="flex items-center gap-3">
             <div className="bg-slate-950 px-3.5 py-2 rounded-lg border border-slate-800 text-right">
-              <span className="text-[10px] text-slate-400 uppercase font-semibold block">Total SPR Capacity</span>
+              <span className="text-[10px] text-slate-300 uppercase font-semibold block">Total SPR Capacity</span>
               <strong className="text-blue-400 font-bold text-sm">5.33 MMT (~39M bbls)</strong>
             </div>
             <div className="bg-slate-950 px-3.5 py-2 rounded-lg border border-slate-800 text-right">
-              <span className="text-[10px] text-slate-400 uppercase font-semibold block">Commercial Tankage</span>
+              <span className="text-[10px] text-slate-300 uppercase font-semibold block">Commercial Tankage</span>
               <strong className="text-emerald-400 font-bold text-sm">~64 Days Supply</strong>
             </div>
           </div>
@@ -122,7 +122,7 @@ export const RefineryAndSPR: React.FC<RefineryAndSPRProps> = ({ overallScore }) 
                 <Gauge className="w-4 h-4 text-blue-400" />
                 Simulate Maritime Disruption & Import Reduction
               </h3>
-              <p className="text-xs text-slate-400 mt-0.5">
+              <p className="text-xs text-slate-300 mt-0.5">
                 Adjust the estimated percentage reduction in daily crude imports to calculate Strategic Petroleum Reserve runway.
               </p>
             </div>
@@ -143,7 +143,7 @@ export const RefineryAndSPR: React.FC<RefineryAndSPRProps> = ({ overallScore }) 
               onChange={(e) => setImportLossPercent(Number(e.target.value))}
               className="w-full accent-blue-500 cursor-pointer"
             />
-            <div className="flex justify-between text-[10px] text-slate-400 font-medium">
+            <div className="flex justify-between text-[10px] text-slate-300 font-medium">
               <span>5% (Minor Reroute)</span>
               <span>25% (Red Sea Diversion)</span>
               <span>50% (Hormuz Partial Disruption)</span>
@@ -154,27 +154,27 @@ export const RefineryAndSPR: React.FC<RefineryAndSPRProps> = ({ overallScore }) 
           {/* Output Runway Card */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-2">
             <div className="p-4 rounded-lg bg-slate-900 border border-slate-800 shadow-xs">
-              <span className="text-xs uppercase font-bold text-slate-400 block">Pure SPR Standalone Runway</span>
+              <span className="text-xs uppercase font-bold text-slate-300 block">Pure SPR Standalone Runway</span>
               <div className="text-2xl font-extrabold text-blue-400 mt-1">
                 {sprRunwayDays > 90 ? '> 90 Days' : `${sprRunwayDays.toFixed(1)} Days`}
               </div>
-              <span className="text-xs text-slate-400">Under ISPRL Phase I reserves alone</span>
+              <span className="text-xs text-slate-300">Under ISPRL Phase I reserves alone</span>
             </div>
 
             <div className="p-4 rounded-lg bg-slate-900 border border-slate-800 shadow-xs">
-              <span className="text-xs uppercase font-bold text-slate-400 block">Combined SPR + Industry Tankage</span>
+              <span className="text-xs uppercase font-bold text-slate-300 block">Combined SPR + Industry Tankage</span>
               <div className="text-2xl font-extrabold text-emerald-400 mt-1">
                 {(sprRunwayDays + 64).toFixed(0)} Days
               </div>
-              <span className="text-xs text-slate-400">Includes OMCs & refinery crude stocks</span>
+              <span className="text-xs text-slate-300">Includes OMCs & refinery crude stocks</span>
             </div>
 
             <div className="p-4 rounded-lg bg-slate-900 border border-slate-800 shadow-xs">
-              <span className="text-xs uppercase font-bold text-slate-400 block">Required Spot Subscriptions</span>
+              <span className="text-xs uppercase font-bold text-slate-300 block">Required Spot Subscriptions</span>
               <div className="text-2xl font-extrabold text-blue-400 mt-1">
                 +{Math.round(lostBarrelsPerDay * 30)}M bbls/mo
               </div>
-              <span className="text-xs text-slate-400">Non-Gulf spot purchase needed</span>
+              <span className="text-xs text-slate-300">Non-Gulf spot purchase needed</span>
             </div>
           </div>
         </div>
@@ -222,7 +222,7 @@ export const RefineryAndSPR: React.FC<RefineryAndSPRProps> = ({ overallScore }) 
           </div>
 
           <div className="text-right shrink-0">
-            <span className="text-xs text-slate-400 uppercase font-bold block">Cabinet Trigger Level</span>
+            <span className="text-xs text-slate-300 uppercase font-bold block">Cabinet Trigger Level</span>
             <span className="text-xs font-bold text-slate-200">
               {score < 40 ? 'Level 0 (Standby)' : score <= 60 ? 'Level 1 (Paperwork)' : score <= 80 ? 'Level 2 (Partial 50k bpd)' : 'Level 3 (Max 245k bpd)'}
             </span>
@@ -237,7 +237,7 @@ export const RefineryAndSPR: React.FC<RefineryAndSPRProps> = ({ overallScore }) 
             <Database className="w-4 h-4 text-blue-400" />
             ISPRL Phase I Underground Cavern Storage Status
           </h3>
-          <span className="text-xs text-slate-400 font-semibold">Total Volume: 5.33 MMT (~39M Barrels)</span>
+          <span className="text-xs text-slate-300 font-semibold">Total Volume: 5.33 MMT (~39M Barrels)</span>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -248,7 +248,7 @@ export const RefineryAndSPR: React.FC<RefineryAndSPRProps> = ({ overallScore }) 
               <div className="flex items-center justify-between border-b border-slate-800 pb-3">
                 <div>
                   <h4 className="text-base font-bold text-slate-100">Padur Cavern</h4>
-                  <span className="text-xs font-medium text-slate-400">Udupi, Karnataka</span>
+                  <span className="text-xs font-medium text-slate-300">Udupi, Karnataka</span>
                 </div>
                 <span className="text-[10px] font-bold uppercase px-2.5 py-0.5 bg-emerald-600 text-white rounded-full">
                   FULL (100%)
@@ -257,23 +257,23 @@ export const RefineryAndSPR: React.FC<RefineryAndSPRProps> = ({ overallScore }) 
 
               <div className="space-y-2 text-xs">
                 <div className="flex justify-between items-center bg-slate-950 p-2.5 rounded-lg border border-slate-800">
-                  <span className="text-slate-400 font-medium">Capacity & Fill:</span>
+                  <span className="text-slate-300 font-medium">Capacity & Fill:</span>
                   <strong className="text-slate-100 font-bold">2.50 / 2.50 MMT</strong>
                 </div>
 
                 <div className="flex justify-between items-center bg-slate-950 p-2.5 rounded-lg border border-slate-800">
-                  <span className="text-slate-400 font-medium">Days of Cover:</span>
+                  <span className="text-slate-300 font-medium">Days of Cover:</span>
                   <strong className="text-blue-400 font-bold">~4.5 Days</strong>
                 </div>
 
                 <div className="flex justify-between items-center bg-slate-950 p-2.5 rounded-lg border border-slate-800">
-                  <span className="text-slate-400 font-medium">Max Drawdown Rate:</span>
+                  <span className="text-slate-300 font-medium">Max Drawdown Rate:</span>
                   <strong className="text-emerald-400 font-bold">120,000 bpd</strong>
                 </div>
               </div>
             </div>
 
-            <div className="mt-4 pt-3 border-t border-slate-800 text-xs text-slate-400 flex items-center justify-between">
+            <div className="mt-4 pt-3 border-t border-slate-800 text-xs text-slate-300 flex items-center justify-between">
               <span>Linked Port: Mangalore SPM</span>
               <span className="text-emerald-400 font-bold">READY</span>
             </div>
@@ -285,7 +285,7 @@ export const RefineryAndSPR: React.FC<RefineryAndSPRProps> = ({ overallScore }) 
               <div className="flex items-center justify-between border-b border-slate-800 pb-3">
                 <div>
                   <h4 className="text-base font-bold text-slate-100">Visakhapatnam Cavern</h4>
-                  <span className="text-xs font-medium text-slate-400">Andhra Pradesh</span>
+                  <span className="text-xs font-medium text-slate-300">Andhra Pradesh</span>
                 </div>
                 <span className="text-[10px] font-bold uppercase px-2.5 py-0.5 bg-amber-600 text-white rounded-full">
                   PARTIAL (68%)
@@ -294,23 +294,23 @@ export const RefineryAndSPR: React.FC<RefineryAndSPRProps> = ({ overallScore }) 
 
               <div className="space-y-2 text-xs">
                 <div className="flex justify-between items-center bg-slate-950 p-2.5 rounded-lg border border-slate-800">
-                  <span className="text-slate-400 font-medium">Capacity & Fill:</span>
+                  <span className="text-slate-300 font-medium">Capacity & Fill:</span>
                   <strong className="text-slate-100 font-bold">0.90 / 1.33 MMT</strong>
                 </div>
 
                 <div className="flex justify-between items-center bg-slate-950 p-2.5 rounded-lg border border-slate-800">
-                  <span className="text-slate-400 font-medium">Days of Cover:</span>
+                  <span className="text-slate-300 font-medium">Days of Cover:</span>
                   <strong className="text-blue-400 font-bold">~1.6 Days</strong>
                 </div>
 
                 <div className="flex justify-between items-center bg-slate-950 p-2.5 rounded-lg border border-slate-800">
-                  <span className="text-slate-400 font-medium">Max Drawdown Rate:</span>
+                  <span className="text-slate-300 font-medium">Max Drawdown Rate:</span>
                   <strong className="text-emerald-400 font-bold">50,000 bpd</strong>
                 </div>
               </div>
             </div>
 
-            <div className="mt-4 pt-3 border-t border-slate-800 text-xs text-slate-400 flex items-center justify-between">
+            <div className="mt-4 pt-3 border-t border-slate-800 text-xs text-slate-300 flex items-center justify-between">
               <span>Dual Cavern (HPCL Shared)</span>
               <span className="text-amber-400 font-bold">COMMERCIAL + SPR</span>
             </div>
@@ -322,7 +322,7 @@ export const RefineryAndSPR: React.FC<RefineryAndSPRProps> = ({ overallScore }) 
               <div className="flex items-center justify-between border-b border-slate-800 pb-3">
                 <div>
                   <h4 className="text-base font-bold text-slate-100">Mangalore Cavern</h4>
-                  <span className="text-xs font-medium text-slate-400">Karnataka</span>
+                  <span className="text-xs font-medium text-slate-300">Karnataka</span>
                 </div>
                 <span className="text-[10px] font-bold uppercase px-2.5 py-0.5 bg-emerald-600 text-white rounded-full">
                   OPERATIONAL (89%)
@@ -331,23 +331,23 @@ export const RefineryAndSPR: React.FC<RefineryAndSPRProps> = ({ overallScore }) 
 
               <div className="space-y-2 text-xs">
                 <div className="flex justify-between items-center bg-slate-950 p-2.5 rounded-lg border border-slate-800">
-                  <span className="text-slate-400 font-medium">Capacity & Fill:</span>
+                  <span className="text-slate-300 font-medium">Capacity & Fill:</span>
                   <strong className="text-slate-100 font-bold">1.33 / 1.50 MMT</strong>
                 </div>
 
                 <div className="flex justify-between items-center bg-slate-950 p-2.5 rounded-lg border border-slate-800">
-                  <span className="text-slate-400 font-medium">Days of Cover:</span>
+                  <span className="text-slate-300 font-medium">Days of Cover:</span>
                   <strong className="text-blue-400 font-bold">~2.4 Days</strong>
                 </div>
 
                 <div className="flex justify-between items-center bg-slate-950 p-2.5 rounded-lg border border-slate-800">
-                  <span className="text-slate-400 font-medium">Max Drawdown Rate:</span>
+                  <span className="text-slate-300 font-medium">Max Drawdown Rate:</span>
                   <strong className="text-emerald-400 font-bold">75,000 bpd</strong>
                 </div>
               </div>
             </div>
 
-            <div className="mt-4 pt-3 border-t border-slate-800 text-xs text-slate-400 flex items-center justify-between">
+            <div className="mt-4 pt-3 border-t border-slate-800 text-xs text-slate-300 flex items-center justify-between">
               <span>Direct Link: MRPL Refinery</span>
               <span className="text-emerald-400 font-bold">ONLINE</span>
             </div>
@@ -365,13 +365,13 @@ export const RefineryAndSPR: React.FC<RefineryAndSPRProps> = ({ overallScore }) 
               National Refinery Status Board
             </h3>
           </div>
-          <span className="text-xs text-slate-400 font-semibold">National Capacity: 256 MTPA</span>
+          <span className="text-xs text-slate-300 font-semibold">National Capacity: 256 MTPA</span>
         </div>
 
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse min-w-[600px]">
             <thead>
-              <tr className="border-b border-slate-800 text-[10px] uppercase font-bold text-slate-400 tracking-wider bg-slate-950">
+              <tr className="border-b border-slate-800 text-[10px] uppercase font-bold text-slate-300 tracking-wider bg-slate-950">
                 <th className="p-3">Refinery Name</th>
                 <th className="p-3">Capacity (MTPA)</th>
                 <th className="p-3">Primary Crude Source</th>
@@ -388,7 +388,7 @@ export const RefineryAndSPR: React.FC<RefineryAndSPRProps> = ({ overallScore }) 
                   Jamnagar (Reliance)
                 </td>
                 <td className="p-3 font-semibold text-slate-300">33.0 MTPA</td>
-                <td className="p-3 text-slate-400">Middle East Heavy Sour</td>
+                <td className="p-3 text-slate-300">Middle East Heavy Sour</td>
                 <td className="p-3">
                   {(() => {
                     const exp = getRefineryExposure('Jamnagar');
@@ -409,7 +409,7 @@ export const RefineryAndSPR: React.FC<RefineryAndSPRProps> = ({ overallScore }) 
                   Kochi (BPCL)
                 </td>
                 <td className="p-3 font-semibold text-slate-300">15.5 MTPA</td>
-                <td className="p-3 text-slate-400">Middle East & West Africa</td>
+                <td className="p-3 text-slate-300">Middle East & West Africa</td>
                 <td className="p-3">
                   {(() => {
                     const exp = getRefineryExposure('Kochi');
@@ -430,7 +430,7 @@ export const RefineryAndSPR: React.FC<RefineryAndSPRProps> = ({ overallScore }) 
                   Mangalore (MRPL)
                 </td>
                 <td className="p-3 font-semibold text-slate-300">15.0 MTPA</td>
-                <td className="p-3 text-slate-400">Middle East Sour & Spot</td>
+                <td className="p-3 text-slate-300">Middle East Sour & Spot</td>
                 <td className="p-3">
                   {(() => {
                     const exp = getRefineryExposure('Mangalore');
@@ -451,7 +451,7 @@ export const RefineryAndSPR: React.FC<RefineryAndSPRProps> = ({ overallScore }) 
                   Paradip (IOCL)
                 </td>
                 <td className="p-3 font-semibold text-slate-300">15.0 MTPA</td>
-                <td className="p-3 text-slate-400">Russian Urals & African Sweet</td>
+                <td className="p-3 text-slate-300">Russian Urals & African Sweet</td>
                 <td className="p-3">
                   {(() => {
                     const exp = getRefineryExposure('Paradip');
@@ -472,7 +472,7 @@ export const RefineryAndSPR: React.FC<RefineryAndSPRProps> = ({ overallScore }) 
                   Numaligarh (NRL)
                 </td>
                 <td className="p-3 font-semibold text-slate-300">3.0 MTPA</td>
-                <td className="p-3 text-slate-400">Domestic Assam Crude</td>
+                <td className="p-3 text-slate-300">Domestic Assam Crude</td>
                 <td className="p-3">
                   {(() => {
                     const exp = getRefineryExposure('Numaligarh');

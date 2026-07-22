@@ -45,7 +45,7 @@ export const MacroImpact: React.FC = () => {
               <Activity className="w-5 h-5 text-blue-400" />
               Macroeconomic Impact Simulator
             </h2>
-            <p className="text-xs text-slate-400 mt-1">
+            <p className="text-xs text-slate-300 mt-1">
               Simulate cascading impacts on India's economy and Strategic Petroleum Reserves (SPR) based on disruption scenarios.
             </p>
           </div>
@@ -121,9 +121,9 @@ export const MacroImpact: React.FC = () => {
               <span className={`text-4xl font-extrabold tracking-tighter ${result.spr_survival_days < 5 ? 'text-red-400' : 'text-slate-100'}`}>
                 {result.spr_survival_days}
               </span>
-              <span className="text-sm font-semibold text-slate-400">Days</span>
+              <span className="text-sm font-semibold text-slate-300">Days</span>
             </div>
-            <div className="text-xs text-slate-400 mt-2 relative z-10 border-t border-slate-800 pt-2">Remaining runway from ISPRL 9.5-day baseline</div>
+            <div className="text-xs text-slate-300 mt-2 relative z-10 border-t border-slate-800 pt-2">Remaining runway from ISPRL 9.5-day baseline</div>
           </div>
 
           <div className="bg-slate-900 p-5 md:p-6 rounded-xl border border-slate-800 shadow-sm relative overflow-hidden">
@@ -132,7 +132,7 @@ export const MacroImpact: React.FC = () => {
               <span className="text-xs font-bold uppercase tracking-wider text-slate-300">Brent Crude Surge</span>
             </div>
             <div className="text-4xl font-extrabold tracking-tighter text-slate-100 relative z-10">{result.brent_crude_surge_pct}</div>
-            <div className="text-xs text-slate-400 mt-2 relative z-10 border-t border-slate-800 pt-2">Projected global price jump immediately</div>
+            <div className="text-xs text-slate-300 mt-2 relative z-10 border-t border-slate-800 pt-2">Projected global price jump immediately</div>
           </div>
 
           <div className="bg-slate-900 p-5 md:p-6 rounded-xl border border-slate-800 shadow-sm relative overflow-hidden">
@@ -141,7 +141,7 @@ export const MacroImpact: React.FC = () => {
               <span className="text-xs font-bold uppercase tracking-wider text-slate-300">Pump Price Impact</span>
             </div>
             <div className="text-4xl font-extrabold tracking-tighter text-slate-100 relative z-10">{result.pump_price_impact_inr}</div>
-            <div className="text-xs text-slate-400 mt-2 relative z-10 border-t border-slate-800 pt-2">Estimated hit to domestic retail fuels</div>
+            <div className="text-xs text-slate-300 mt-2 relative z-10 border-t border-slate-800 pt-2">Estimated hit to domestic retail fuels</div>
           </div>
 
           <div className="bg-slate-900 p-5 md:p-6 rounded-xl border border-slate-800 shadow-sm col-span-1">
@@ -150,7 +150,7 @@ export const MacroImpact: React.FC = () => {
               <span className="text-xs font-bold uppercase tracking-wider text-slate-300">Refinery Slowdown</span>
             </div>
             <div className="text-3xl font-extrabold tracking-tighter text-slate-100">{result.refinery_slowdown_pct}</div>
-            <div className="text-xs text-slate-400 mt-2 border-t border-slate-800 pt-2">Reduction in national refinery run rates</div>
+            <div className="text-xs text-slate-300 mt-2 border-t border-slate-800 pt-2">Reduction in national refinery run rates</div>
           </div>
 
           <div className="bg-slate-900 p-5 md:p-6 rounded-xl border border-slate-800 shadow-sm col-span-full lg:col-span-2">
@@ -179,7 +179,7 @@ export const MacroImpact: React.FC = () => {
               <span className="text-xs font-bold uppercase tracking-wider text-slate-300">Time to Stabilize</span>
             </div>
             <div className="text-2xl font-extrabold tracking-tighter text-slate-100 relative z-10">{result.days_to_stabilize}</div>
-            <div className="text-xs text-slate-400 mt-2 relative z-10 border-t border-slate-800 pt-2">Estimated duration until normal supply resumes</div>
+            <div className="text-xs text-slate-300 mt-2 relative z-10 border-t border-slate-800 pt-2">Estimated duration until normal supply resumes</div>
           </div>
 
           <div className="col-span-full sm:col-span-2 bg-slate-900 p-5 md:p-6 rounded-xl border border-slate-800 shadow-sm">
@@ -199,7 +199,7 @@ export const MacroImpact: React.FC = () => {
           </div>
 
           <div className="col-span-full bg-slate-950 p-5 rounded-xl border border-slate-800">
-            <div className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3 flex items-center gap-2">
+            <div className="text-xs font-bold uppercase tracking-widest text-slate-300 mb-3 flex items-center gap-2">
               <FileText className="w-3.5 h-3.5" /> Base Model Assumptions (July 2026 Baseline)
             </div>
             <div className="flex flex-wrap gap-2">
