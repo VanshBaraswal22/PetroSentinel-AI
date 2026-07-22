@@ -1,0 +1,6 @@
+{
+  "name": "India Energy Security Risk Monitor",
+  "description": "Live Risk Signal Processor and maritime corridor threat analyzer for India's Ministry of Petroleum, tracking Strait of Hormuz, Red Sea, and OPEC+ supply vectors.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
