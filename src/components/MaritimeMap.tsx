@@ -219,13 +219,13 @@ export const MaritimeMap: React.FC<MaritimeMapProps> = ({
             </g>
 
             {/* Map Legend */}
-            <g transform="translate(15, 335)" fill="#0f172a" stroke="#334155">
-              <rect width="210" height="60" rx="6" opacity="0.9" />
-              <text x="10" y="16" fill="#f8fafc" fontSize="9" fontWeight="bold">Corridor Navigation Key:</text>
-              <line x1="10" y1="28" x2="35" y2="28" stroke={getNodeColor(hormuzRisk)} strokeWidth="2" strokeDasharray="3 2" />
-              <text x="42" y="31" fill="#cbd5e1" fontSize="8">Hormuz Main Transit</text>
-              <line x1="10" y1="44" x2="35" y2="44" stroke="#38bdf8" strokeWidth="2" strokeDasharray="3 2" />
-              <text x="42" y="47" fill="#cbd5e1" fontSize="8">Cape of Good Hope Reroute</text>
+            <g transform="translate(15, 330)">
+              <rect width="220" height="70" rx="8" fill="#0f172a" stroke="#334155" strokeWidth="1.5" opacity="0.95" />
+              <text x="12" y="20" fill="#f8fafc" fontSize="11" fontWeight="bold" stroke="none">Corridor Navigation Key:</text>
+              <line x1="12" y1="36" x2="38" y2="36" stroke={getNodeColor(hormuzRisk)} strokeWidth="2.5" strokeDasharray="4 2" />
+              <text x="46" y="39" fill="#e2e8f0" fontSize="10" fontWeight="600" stroke="none">Hormuz Main Transit</text>
+              <line x1="12" y1="54" x2="38" y2="54" stroke="#38bdf8" strokeWidth="2.5" strokeDasharray="4 2" />
+              <text x="46" y="57" fill="#e2e8f0" fontSize="10" fontWeight="600" stroke="none">Cape of Good Hope Reroute</text>
             </g>
           </svg>
 
