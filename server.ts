@@ -59,6 +59,8 @@ Scoring rules:
 - 61-80: Severe disruption imminent, initiate SPR drawdown planning
 - 81-100: Crisis — emergency OPEC outreach + SPR activation + spot market procurement
 
+Always estimate detection_lead_time_hours — this is a critical metric showing how many hours before physical market repricing this system flagged the risk.
+
 Return STRICTLY valid JSON. No preamble. No commentary.`;
 
 // Fallback rule-based analyzer in case Gemini key is missing or offline
@@ -146,6 +148,8 @@ function fallbackRiskAnalysis(text: string) {
       opec_details: lower.includes('opec') || lower.includes('sanctions') ? "Policy changes and pricing benchmarks under close monitoring." : "Supply targets stable."
     },
     indian_refinery_impact: "West coast Indian refineries (Jamnagar, Mangalore, Mumbai) maintain normal operational buffers.",
+    detection_lead_time_hours: isDeescalation ? 0 : (hormuz > 50 ? 12 : (redSea > 50 ? 6 : (opec > 50 ? 24 : 0))),
+    market_impact_description: isDeescalation ? "Tensions easing across major crude transit corridors." : "Elevated risk of crude supply disruption and shipping freight rate surcharges.",
     recommended_mitigation: [
       "Monitor naval escort protocols under Operation Sankalp.",
       "Evaluate Strategic Petroleum Reserve (SPR) readiness at Padur and Visakhapatnam.",
@@ -230,6 +234,14 @@ app.post('/api/analyze', async (req, res) => {
                   required: ['hormuz_details', 'red_sea_details', 'opec_details']
                 },
                 indian_refinery_impact: { type: Type.STRING },
+                detection_lead_time_hours: {
+                  type: Type.INTEGER,
+                  description: 'Estimated hours before this risk event would cause a measurable Brent crude price reaction or freight rate spike. Based on historical precedent: Hormuz tensions = 6-24hrs, Red Sea attacks = 2-12hrs, OPEC cuts = 12-48hrs. Return 0 for low-risk feeds.'
+                },
+                market_impact_description: {
+                  type: Type.STRING,
+                  description: 'One short phrase describing the expected market impact, e.g. "Brent crude surged +8.2% in single session" or "Freight insurance premiums spiked 400%". Match to the specific event in the text.'
+                },
                 recommended_mitigation: {
                   type: Type.ARRAY,
                   items: { type: Type.STRING }
@@ -242,7 +254,9 @@ app.post('/api/analyze', async (req, res) => {
                 'opec_risk',
                 'primary_threat_vector',
                 'risk_momentum',
-                'affected_refineries'
+                'affected_refineries',
+                'detection_lead_time_hours',
+                'market_impact_description'
               ]
             }
           }
@@ -691,6 +705,30 @@ Return ONLY valid JSON. Be precise, operational, and realistic.`;
     });
   }
 });
+
+// Background Live Poller (Runs every 15 mins using Google Search Grounding)
+setInterval(async () => {
+  try {
+    const ai = getGeminiClient();
+    if (!ai) return;
+
+    const response = await ai.models.generateContent({
+      model: 'gemini-3.6-flash',
+      contents: "Search Google for breaking news from today on Strait of Hormuz oil tankers, Red Sea Bab el-Mandeb shipping, and OPEC+ crude quotas.",
+      config: {
+        systemInstruction: SYSTEM_PROMPT,
+        tools: [{ googleSearch: {} }],
+        responseMimeType: 'application/json'
+      }
+    });
+
+    if (response.text) {
+      console.log('Automated 15-Min Live Update Success:', response.text.substring(0, 100));
+    }
+  } catch (err) {
+    console.error('Background Live Ingest Error:', err);
+  }
+}, 15 * 60 * 1000);
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {

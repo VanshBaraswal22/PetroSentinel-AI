@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ShieldAlert, Radio, MapPin, Database, History, Code2, Activity, FileText, Layers, ChevronDown, ShieldCheck, Menu, X } from 'lucide-react';
 
-export type TabType = 'processor' | 'map' | 'reserves' | 'impact' | 'logistics' | 'history' | 'api' | 'exec-brief' | 'architecture';
+export type TabType = 'processor' | 'map' | 'reserves' | 'impact' | 'history' | 'api' | 'exec-brief' | 'architecture';
 
 interface HeaderProps {
   activeTab: TabType;
@@ -92,6 +92,9 @@ export const Header: React.FC<HeaderProps> = ({
                   <span className="text-xs font-semibold tracking-wider text-slate-400 flex items-center gap-1">
                     <Radio className="w-3 h-3 text-emerald-400 animate-pulse" /> LIVE SIGNAL
                   </span>
+                </div>
+                <div className="text-blue-200 font-extrabold text-sm tracking-widest uppercase mt-1">
+                  PetroSentinel-AI
                 </div>
                 <h1 className="text-base sm:text-lg font-extrabold text-slate-100 tracking-tight mt-0.5">
                   Energy Security & Maritime Disruption Monitor
